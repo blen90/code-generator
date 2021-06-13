@@ -4,6 +4,7 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
+  console.log("hey, this button has been clicked")
 
   // Choices 
   var upperCase = ("ABCDEFGHIJKLMNOPQRSTUVWXYZ").split("");
@@ -19,7 +20,7 @@ function writePassword() {
   console.log(passLength);
 
 
-  var upperLetter= window.confirm("Would you like to use uppercase letters in your password?");
+  var upperLetter = window.confirm("Would you like to use uppercase letters in your password?");
 
   console.log(upperLetter);
 
@@ -36,61 +37,66 @@ function writePassword() {
 
   console.log(spCharacters);
 
-
-
   var optionSelection = "";
   console.log(optionSelection);
 
 
-
-if (passLength => 8 && passLength <= 128) {
-  if("upperLetter === true") {
-    optionSelection.upperCase;
-  }
-  if("lowerLetter === true") {
-    optionSelection.lowerCase;
-  }
-
-  if("num === true") {
-    optionSelection.number;
-  }
-
-  if("spCharacter === true") {
-    optionSelection.specialCharacter;
-  }
-
-var optionSelection = ["upperCase", "lowerCase", "number", "specialCharacter"];
-Math.floor(Math.random()*optionSelection.length)
-
+  if (passLength >= 8 && passLength <= 128) {
+  // } else window.prompt("Did you chosee a number between 8 and 28");
 }
 
-//function generatePassword() {
-  //var password = generatePassword();
-  //var passwordText = document.querySelector("#password");
+    if (upperCase == true) {
+      optionSelection + optionSelection.upperCase;
+    }
 
-//}
+    if (lowerCase == true) {
+      optionSelection + optionSelection.lowerCase;
+    }
 
+    if (number == true) {
+      optionSelection + optionSelection.number;
+    }
 
-  //passwordText.value = password;
-//}
-
-
-
-// setup variable for all the choices user picked 
-
-//Compare variables with the ones on 9-11
-
-//if upCase =  "true" then upperCase
-//if
+    if (specialCharacter == true) {
+      optionSelection + optionSelection.specialCharacter;
+    }
 
 
 
-  //
+  /*
+    var passLength = Math.floor(Math.random() * optionSelection.length);
+  
+  
+  
+    function generatePassword () {
+    var password = generatePassword (); 
+    var passwordText = document.querySelector("#password");
+    passwordText.value = password;
+  
+  }
+  
+    //
+  //}
+  
+  
+  
+  // setup variable for all the choices user picked 
+  
+  //Compare variables with the ones on 9-11
+  
+  //if upCase =  "true" then upperCase
+  //if
+  
+  
+  
+    //
+  
+  //")
+  //}
+  
+  // Add event listener to generate button generateBtn.addEventListener("click", writePassword)
+  
+  //*/
 
-//console.log("hey, this button has been clicked")
-//}
 
-// Add event listener to generate button generateBtn.addEventListener("click", writePassword)
-
-//
 }
