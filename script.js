@@ -10,21 +10,22 @@ function writePassword() {
   var lowerCase = ("abcdefghijklmnopqrstuvwxyz").split("");
   var number = ("0123456789").split("");
   var specialCharacter = ("!@#$%^&*()_-.,").split("");
-  var allCharacters = [];
+
 
   // Windows to confirm choices
 
-  var charCount = window.prompt("How many characters do you want your password to be?");
+  var passLength = window.prompt("How long would you like your password to be? The password should be between 8 and 128 characters.");
 
-  console.log(charCount);
+  console.log(passLength);
 
-  var upCase = window.confirm("Would you like to use uppercase letters in your password?");
 
-  console.log(upCase);
+  var upperLetter= window.confirm("Would you like to use uppercase letters in your password?");
 
-  var lowCase = window.confirm("Would you like to use lowercase letters in your password?");
+  console.log(upperLetter);
 
-  console.log(lowCase);
+  var lowerLetter = window.confirm("Would you like to use lowercase letters in your password?");
+
+  console.log(lowerLetter);
 
 
   var num = window.confirm("Would you like to use numbers in your password?");
@@ -35,32 +36,41 @@ function writePassword() {
 
   console.log(spCharacters);
 
-}
 
 
-function generatePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  var optionSelection = "";
+  console.log(optionSelection);
+
+
+
+if (passLength => 8 && passLength <= 128) {
+  if("upperLetter === true") {
+    optionSelection.upperCase;
+  }
+  if("lowerLetter === true") {
+    optionSelection.lowerCase;
+  }
+
+  if("num === true") {
+    optionSelection.number;
+  }
+
+  if("spCharacter === true") {
+    optionSelection.specialCharacter;
+  }
+
+var optionSelection = ["upperCase", "lowerCase", "number", "specialCharacter"];
+Math.floor(Math.random()*optionSelection.length)
 
 }
 
-function stringlength(inputtxt, minlength, maxlength)
-{ 
-var field = inputtxt.value; 
-var mnlen = minlength;
-var mxlen = maxlength;
+//function generatePassword() {
+  //var password = generatePassword();
+  //var passwordText = document.querySelector("#password");
 
-if(field.length<mnlen || field.length> mxlen)
-{ 
-alert("Please input the userid between " +8+ " and " +128+ " characters");
-return false;
-}
-else
-{ 
-alert('Your userid have accepted.');
-return true;
-}
-}
+//}
+
+
   //passwordText.value = password;
 //}
 
@@ -80,5 +90,7 @@ return true;
 //console.log("hey, this button has been clicked")
 //}
 
-// Add event listener to generate button
-//generateBtn.addEventListener("click", writePassword);
+// Add event listener to generate button generateBtn.addEventListener("click", writePassword)
+
+//
+}
