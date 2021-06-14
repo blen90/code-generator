@@ -7,7 +7,7 @@ function writePassword() {
   console.log("hey, this button has been clicked")
 
   // Preferences
-  
+
   var finalPassword = "";
   var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var lowerCase = "abcdefghijklmnopqrstuvwxyz";
@@ -43,9 +43,9 @@ function writePassword() {
   console.log(optionSelection);
 
 
-    if (passLength >= 8 && passLength <= 128) {
-  
-  
+  if (passLength >= 8 && passLength <= 128) {
+
+
     if (upperLetter === true) {
       optionSelection += upperCase;  // uppercase should probably be a string
       console.log(optionSelection);
@@ -67,13 +67,16 @@ function writePassword() {
     }
 
     for (var i = 0; i < passLength; i++) {
-      var password = optionSelection.charAt(Math.floor(Math.random() * Math.floor(optionSelection.length -1))); 
+      var password = optionSelection.charAt(Math.floor(Math.random() * Math.floor(optionSelection.length - 1)));
       finalPassword += password;
       console.log(finalPassword);
     }
+      
 
-    document.getElementById("password").textContent = finalPassword
+    document.getElementById("password").textContent = "This is your secure password:  "  +  finalPassword
 
-  } else window.prompt("Did you chosee the correct number of characters between 8 and 128?");
-
+  } else {
+    window.confirm("That didn't work... Did you chosee the correct number of characters between 8 and 128?");
   }
+}
+
