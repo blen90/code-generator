@@ -6,11 +6,14 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   console.log("hey, this button has been clicked")
 
-  // Choices 
-  var upperCase = ("ABCDEFGHIJKLMNOPQRSTUVWXYZ").split("");
-  var lowerCase = ("abcdefghijklmnopqrstuvwxyz").split("");
-  var number = ("0123456789").split("");
-  var specialCharacter = ("!@#$%^&*()_-.,").split("");
+  // Choices
+  
+  var options = {
+  upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+  lowerCase = "abcdefghijklmnopqrstuvwxyz",
+  number = "0123456789",
+  specialCharacter = "!@#$%^&*()_-.,",
+}
 
 
   // Windows to confirm choices
@@ -44,25 +47,35 @@ function writePassword() {
   if (passLength >= 8 && passLength <= 128) {
   // } else window.prompt("Did you chosee a number between 8 and 28");
 }
+    //build one long string w/ all the character types the user has chosen
 
-    if (upperCase == true) {
-      optionSelection + optionSelection.upperCase;
+
+    var optionSelection = {
+
     }
 
-    if (lowerCase == true) {
-      optionSelection + optionSelection.lowerCase;
+    if (upperLetter == true) {
+      optionSelection += upperCase;  // uppercase shoulkd probably be a string
     }
 
-    if (number == true) {
-      optionSelection + optionSelection.number;
+    if (lowerLetter == true) {
+      optionSelection += optionSelection.lowerCase;
     }
 
-    if (specialCharacter == true) {
-      optionSelection + optionSelection.specialCharacter;
+    if (num == true) {
+      optionSelection += optionSelection.number;
     }
 
+    if (spCharacter == true) {
+      optionSelection += optionSelection.specialCharacter;
+    }
 
-
+    for (var i = 0; i < passwordLength; i++) {
+      password += optionSelection.charAt(Math.floor(Math.random() * Math.floor(optionSelection.length -1)));
+    }
+    
+    // now you have one long string with all possible characters
+    // "ABCD..abcde..1234"
   /*
     var passLength = Math.floor(Math.random() * optionSelection.length);
   
