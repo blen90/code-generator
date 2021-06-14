@@ -43,10 +43,8 @@ function writePassword() {
   console.log(optionSelection);
 
 
-  if (passLength >= 8 && passLength <= 128) {
-  } else window.prompt("Did you chosee a number between 8 and 28");
-
-    //build one long string w/ all the character types the user has chosen
+    if (passLength >= 8 && passLength <= 128) {
+  
   
     if (upperLetter === true) {
       optionSelection += upperCase;  // uppercase should probably be a string
@@ -75,5 +73,7 @@ function writePassword() {
     }
 
     document.getElementById("password").textContent = finalPassword
+
+  } else window.prompt("Did you chosee the correct number of characters between 8 and 128?");
 
   }
