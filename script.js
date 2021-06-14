@@ -6,14 +6,13 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   console.log("hey, this button has been clicked")
 
-  // Choices
+  // Preferences
   
-  var options = {
-  upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-  lowerCase = "abcdefghijklmnopqrstuvwxyz",
-  number = "0123456789",
-  specialCharacter = "!@#$%^&*()_-.,",
-}
+  var finalPassword = "";
+  var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var lowerCase = "abcdefghijklmnopqrstuvwxyz";
+  var number = "0123456789";
+  var specialCharacter = "!@#$%^&*()";
 
 
   // Windows to confirm choices
@@ -45,71 +44,36 @@ function writePassword() {
 
 
   if (passLength >= 8 && passLength <= 128) {
-  // } else window.prompt("Did you chosee a number between 8 and 28");
-}
+  } else window.prompt("Did you chosee a number between 8 and 28");
+
     //build one long string w/ all the character types the user has chosen
-
-
-    var optionSelection = {
-
-    }
-
-    if (upperLetter == true) {
-      optionSelection += upperCase;  // uppercase shoulkd probably be a string
-    }
-
-    if (lowerLetter == true) {
-      optionSelection += optionSelection.lowerCase;
-    }
-
-    if (num == true) {
-      optionSelection += optionSelection.number;
-    }
-
-    if (spCharacter == true) {
-      optionSelection += optionSelection.specialCharacter;
-    }
-
-    for (var i = 0; i < passwordLength; i++) {
-      password += optionSelection.charAt(Math.floor(Math.random() * Math.floor(optionSelection.length -1)));
-    }
-    
-    // now you have one long string with all possible characters
-    // "ABCD..abcde..1234"
-  /*
-    var passLength = Math.floor(Math.random() * optionSelection.length);
   
-  
-  
-    function generatePassword () {
-    var password = generatePassword (); 
-    var passwordText = document.querySelector("#password");
-    passwordText.value = password;
-  
+    if (upperLetter === true) {
+      optionSelection += upperCase;  // uppercase should probably be a string
+      console.log(optionSelection);
+    }
+
+    if (lowerLetter === true) {
+      optionSelection += lowerCase;
+      console.log(optionSelection);
+    }
+
+    if (num === true) {
+      optionSelection += number;
+      console.log(optionSelection);
+    }
+
+    if (spCharacters === true) {
+      optionSelection += specialCharacter;
+      console.log(optionSelection);
+    }
+
+    for (var i = 0; i < passLength; i++) {
+      var password = optionSelection.charAt(Math.floor(Math.random() * Math.floor(optionSelection.length -1))); 
+      finalPassword += password;
+      console.log(finalPassword);
+    }
+
+    document.getElementById("password").textContent = finalPassword
+
   }
-  
-    //
-  //}
-  
-  
-  
-  // setup variable for all the choices user picked 
-  
-  //Compare variables with the ones on 9-11
-  
-  //if upCase =  "true" then upperCase
-  //if
-  
-  
-  
-    //
-  
-  //")
-  //}
-  
-  // Add event listener to generate button generateBtn.addEventListener("click", writePassword)
-  
-  //*/
-
-
-}
