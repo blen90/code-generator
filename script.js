@@ -80,29 +80,4 @@ function writePassword() {
     clearContent();
   }
 
-
-  /*var generateBtn = document.querySelector("#generate");
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-}
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-  /*function writePassword() {
-    var finalPassword= optionSelection();
-    var finalPassword = document.getElementById("password").textContent = "This is your secure password:  "  +  finalPassword
-  
-  }*/
-
-
-
-  /* Add event listener to generate button
-  generateBtn.addEventListener("click", writePassword);*/
-
 }
