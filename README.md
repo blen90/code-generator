@@ -1,13 +1,13 @@
-# hw3-code-generator
+# Code Generator
 
 
 ## Link to my homework repository:
 
-https://github.com/blen90/hw3-code-generator
+https://github.com/blen90/code-generator
 
-## Link to my deployed repository
+## Link to deployed App
 
-https://blen90.github.io/hw3-code-generator/
+https://blen90.github.io/code-generator/
 
 
 ## My task
